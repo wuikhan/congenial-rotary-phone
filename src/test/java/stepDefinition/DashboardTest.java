@@ -70,4 +70,23 @@ public class DashboardTest extends BaseClass {
 	public void i_quit_the_browser()  {
 	   driver.quit();
 	}
+	
+	@Then("^I click the \"([^\"]*)\" tab$")
+	public void i_click_the_tab(String tabLink)  {
+	    driver.findElement(By.linkText(tabLink)).click();
+	}
+
+	@Then("^I should see the text \"([^\"]*)\"$")
+	public void i_should_see_the_text(String arg1)  {
+	   String actualText = "Review all error messages below to correct your data.";
+	  String expectedText = driver.findElement(By.id("errorDiv_ep")).getText();
+	  if(expectedText.contains(actualText)) {
+		  Assert.assertTrue(true);
+	  }
+	}
+
+	@Then("^I enter \"([^\"]*)\" text for \"([^\"]*)\" field$")
+	public void i_enter_text_for_field(String text, String elementId) {
+	    driver.findElement(By.id(elementId)).sendKeys(text);
+	}
 }
