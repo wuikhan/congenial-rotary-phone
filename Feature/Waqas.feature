@@ -23,5 +23,6 @@ Feature: Verify the dashboard elements
     When I click the "save" button
     Then I should see the text "Review all error messages below to correct your data."
     And I enter "abc123" text for "acc2" field
+    And I enter "100,000" text for "acc8" field
     When I click the "save" button
     And I quit the browser
