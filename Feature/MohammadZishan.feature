@@ -18,11 +18,11 @@ Feature: Verify Accounts tab is present
     And I enter "Pa55word" password
     When I click the "Login" button
     Then I should see the "Accounts" link
-    And I click the "Account" tab
+    And I click the "Accounts" tab
     And I click the "new" button 
     And I click the "save" button
     And I should see the text "Review all error messages below to correct your data"
     And I enter "abc123" text for "acc2" field 
-    When I click the "Save" button
+    When I click the "save" button
     And I quit the browser
   

@@ -56,8 +56,6 @@ public class DashboardTest extends BaseClass {
 		
 		if(expectedText.contains(actualText)) {
 			Assert.assertTrue(true);
-
-
 		}
 		
 	   
